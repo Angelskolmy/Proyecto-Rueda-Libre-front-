@@ -9,21 +9,23 @@
         .reservas-layout {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-areas:
+                "mapa horario"
+                "formulario formulario";
             gap: 24px;
             max-width: 1100px;
             margin: 0 auto;
         }
 
-        .reservas-info table {
+        .reservas-info {
+            grid-area: formulario;
+            justify-self: start;
             width: 100%;
-            border-collapse: collapse;
         }
 
-        .reservas-info th,
-        .reservas-info td {
-            padding: 10px;
-            border: 1px solid #888;
-            text-align: left;
+        .reservas-mapa {
+            grid-area: mapa;
+            margin: 0;
         }
 
         .reservas-mapa iframe {
@@ -33,9 +35,22 @@
             border: 0;
         }
 
+        .reservas-horario {
+            grid-area: horario;
+        }
+
+        .reservas-horario table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
         @media (max-width: 700px) {
             .reservas-layout {
                 grid-template-columns: minmax(0, 1fr);
+                grid-template-areas:
+                    "mapa"
+                    "horario"
+                    "formulario";
             }
         }
     </style>
@@ -62,56 +77,113 @@
 
             <h2>Reservas</h2>
             <div class="reservas-layout">
-                <div class="reservas-info">
+                <form class="reservas-info" action="../../backend.py" method="post">
+                    <fieldset>
+                        <legend>Tus Datos</legend>
+                        <div>
+                            <label for="nombre">Nombre Completo</label><br>
+                            <input id="nombre" name="nombre" type="text" minlength="3" required><br>
+
+                            <label for="documento">Documento de Identidad</label><br>
+                            <input id="documento" type="number" name="DocumentId" required min="6" max="10"><br>
+
+                            <label for="email">Email</label><br>
+                            <input id="email" type="email" name="ElecEm"
+                                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                placeholder="ejemplo@gmail.com" required><br>
+
+                            <label for="telefono">Numero de telefono</label><br>
+                            <input id="telefono" type="tel" name="PhoneNumber" pattern="3[0-9]{9}"
+                                placeholder="319 663 7681" required><br>
+                        </div>
+                    </fieldset><br>
+
+                    <fieldset>
+                        <legend>Tu Alquiler</legend>
+                        <div>
+                            <label for="fecha-alquiler">Fecha de alquiler</label><br>
+                            <input type="date" name="Fechtalqu" id="fecha-alquiler" min="2026-11-01"
+                                max="2026-11-01"><br>
+
+                            <label for="opcion-bicicleta">Opcion de bicicleta</label><br>
+                            <select name="OpBici" id="opcion-bicicleta" required>
+                                <option value="todo terreno">todo terreno</option>
+                                <option value="Electrica">Electrica</option>
+                                <option value="Velocidad">Velocidad</option>
+                            </select><br>
+
+                            <label for="opcion-plan">Opcion plan</label><br>
+                            <select name="Opplan" id="opcion-plan" required>
+                                <option value="Gold">Gold</option>
+                                <option value="Simple">Simple</option>
+                                <option value="Of road">Of road</option>
+                            </select><br>
+
+                            <label for="cantidad-bicicletas">Cantidad de bicicletas</label><br>
+                            <input id="cantidad-bicicletas" type="number" name="cantidad" max="6" min="1" required><br>
+                        </div>
+                    </fieldset><br>
+
+                    <fieldset>
+                        <legend>Confirmacion</legend>
+                        <div>
+                            <label for="comentarios">Comentarios</label><br>
+                            <textarea name="comentarios" id="comentarios" maxlength="300"></textarea><br>
+
+                            <input id="politicas" name="politicas" type="checkbox" required>
+                            <label for="politicas">¿Aceptar politicas de alquiler?</label><br>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <figure class="reservas-mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.343423984637!2d-75.58354560000001!3d6.2193664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429ce949305d3%3A0x140f0dcf8574879a!2sBarrio%20Antioquia%20Freestyle%20(La%20Liga%20del%20Barrio)!5e0!3m2!1ses-419!2sco!4v1792516908745!5m2!1ses-419!2sco"
+                        title="Mapa de ubicación de La Rueda Libre" width="600" height="450" allowfullscreen
+                        loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <figcaption>Ubicacion de La Rueda Libre</figcaption>
+                </figure>
+                <aside class="reservas-horario" aria-label="Horario de atención">
                     <table>
+                        <caption>Horario de atención</caption>
                         <thead>
                             <tr>
-                                <th>Lunes</th>
-                                <th>8:00 am - 7:00 pm</th>
+                                <th scope="col">Dia</th>
+                                <th scope="col">Horario</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Marte</td>
+                                <th scope="row">Lunes</th>
                                 <td>8:00 am - 7:00 pm</td>
                             </tr>
                             <tr>
-                                <td>Miercoles</td>
+                                <th scope="row">Martes</th>
                                 <td>8:00 am - 7:00 pm</td>
                             </tr>
                             <tr>
-                                <td>Jueves</td>
+                                <th scope="row">Miercoles</th>
                                 <td>8:00 am - 7:00 pm</td>
                             </tr>
                             <tr>
-                                <td>Viernes</td>
+                                <th scope="row">Jueves</th>
                                 <td>8:00 am - 7:00 pm</td>
                             </tr>
                             <tr>
-                                <td>Sabado</td>
+                                <th scope="row">Viernes</th>
+                                <td>8:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sabado</th>
                                 <td>8:00 am - 12:00 pm</td>
                             </tr>
                         </tbody>
                     </table>
-
-                    <form action="">
-                        <label for="">Correo electronico</label>
-                        <input type="email">
-                        <br>
-                        <label for="">Descripcion</label>
-                        <textarea name="" id=""></textarea>
-                        <button>Enviar</button>
-                    </form>
-                </div>
-                <div class="reservas-mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.343423984637!2d-75.58354560000001!3d6.2193664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429ce949305d3%3A0x140f0dcf8574879a!2sBarrio%20Antioquia%20Freestyle%20(La%20Liga%20del%20Barrio)!5e0!3m2!1ses-419!2sco!4v1792516908745!5m2!1ses-419!2sco"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
+                </aside>
             </div>
 
         </section>
+        <br><br>
 
         <footer>
             <p>&copy; 2026 La Rueda Libre</p>
