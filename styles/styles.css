@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+
+    /* pañeta de colores */
+
+    --Btn1yEnlaces: #1E7A4F;
+    --Btn2YDestacado: #F39A2B;
+    --TitulosySubtitulos: #14213D;
+    --BackgroundPage: #faece1;
+    --TextoGeneral: #aeaeae;
+
+    /* fuentes google */
+
+    --Titulos: "Montserrat", sans-serif;
+    --Textos: "Open Sans", sans-serif;
+}
+
+
+.Yigdrasil {
+
+    background-color: var(--BackgroundPage);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.Rork { 
+    margin: 0;
+    background-color: var(--BackgroundPage);
+}  
+
+/* nav bar */
+
+#laberBar{ 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+} 
+
+.icono_bicicleta {
+    width: 1.7rem;
+    height: 1.2rem;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: var(--Btn2YDestacado);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#BarraNavegadora {
+    margin-top: 0px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    min-height: 64px;
+    padding: 0.75rem 5%;
+    background-color: var(--TitulosySubtitulos);
+    border-bottom: 1.5px solid var(--Btn2YDestacado);
+    margin-bottom: 0;
+}
+
+.label_logo {
+    flex-shrink: 0;
+    color: var(--Btn2YDestacado);
+    font-family: var(--Titulos);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.opcioneNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.opt11 a {
+    color: var(--BackgroundPage);
+    font-family: var(--Textos);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.opt11 a:hover {
+    color: var(--Btn1yEnlaces);
+}
+
+.botones {
+    flex-shrink: 0;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--Btn2YDestacado);
+    color: var(--TitulosySubtitulos);
+    box-shadow: none;
+    font-family: var(--Textos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--Btn1yEnlaces);
+    color: var(--BackgroundPage);
+} 
+
+/* articulo 1 */
+
+#Somer{ 
+    background-image: url("../resources/bannerarticlequienes%20somos.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 460px;    
+}
+
+
+#WhatRaw{ 
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.779);
+    color: var(--BackgroundPage); 
+    min-height: 460px;  
+    border-bottom: 1.5px var(--Btn2YDestacado);
+} 
+
+#WhatRaw h3{ 
+    margin-top: 0; 
+    margin-bottom: 2.5rem; 
+    font-family: var(--Titulos); 
+    font-size: 30px; 
+    color: var(--Btn2YDestacado);
+}  
+
+.subtitle{ 
+    margin-bottom: 2.6rem; 
+    font-family: var(--Titulos); 
+    font-size: 20px;  
+    color: var(--TextoGeneral);
+} 
+
+.textos{ 
+
+    font-family: var(--Textos); 
+    font-size: 16px; 
+    color: var(--TextoGeneral); 
+    font-weight: 700; 
+    text-justify: center;
+
+} 
+
+.article22{ 
+    padding: 0 0rem 0rem; 
+    margin-top: 0; 
+    border-top: solid 2px var(--Btn2YDestacado); 
+    border-bottom: solid 2px var(--Btn2YDestacado);
+} 
+
+
+#Espacing22{ 
+    display: grid; 
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
+    gap: 0rem; 
+    align-items: stretch;
+} 
+
+#ranward1{ 
+    min-width: 0;  
+    background-color: rgba(0, 0, 0, 0.736); 
+} 
+
+#ranward2{ 
+    min-width: 0;
+} 
+
+#imgsection1{ 
+    display: block; 
+    width: 100%;
+    height: 700px; 
+    min-height: 300px; 
+    object-fit: cover;
+}  
+
+.sectio2Title{ 
+
+    color: var(--Btn2YDestacado); 
+    font-family: var(--Titulos);
+    font-size: 30px;  
+    padding-left: 1.5rem; 
+    margin-bottom: 2.3rem;
+    
+} 
+
+.subtitle2{ 
+    padding-left: 1.5rem; 
+    font-family: var(--Titulos); 
+    font-size: 20px; 
+    color: var(--Btn1yEnlaces); 
+    margin-bottom: 2.6rem;
+
+} 
+
+.textos2{ 
+
+    font-family: var(--Textos); 
+    font-size: 16px; 
+    color: var(--TextoGeneral); 
+    font-weight: 700; 
+    text-justify: justify; 
+    padding-left: 1.5rem;  
+    padding-right: 1.5rem ;
+
+}
+
