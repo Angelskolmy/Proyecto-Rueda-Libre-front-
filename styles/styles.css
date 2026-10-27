@@ -318,5 +318,105 @@
     color: var(--TextoGeneral);  
     font-size: 30px; 
 
+}  
+
+.pie_de_pagina{
+    width: 100%; 
+    background-color: var(--TitulosySubtitulos); 
+    align-content: center;
 }
 
+.footerbody{  
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(220px, 1fr)); 
+    gap: 2rem; 
+    box-sizing: border-box; 
+    width: min(calc(100% - 3rem), 1200px);
+    margin-inline: auto;
+    padding: 2rem 1.5rem;
+} 
+
+.footercols:last-child {
+    justify-self: stretch;
+    text-align: center;
+}
+
+.footercols:last-child .titlefoot {
+    text-align: center;
+}
+
+.titlefoot{ 
+    font-family: var(--Titulos); 
+    color: var(--TextoGeneral); 
+    font-size: 18px; 
+    margin-top: 0.4rem; 
+    text-decoration: underline; 
+    text-decoration-color: var(--Btn2YDestacado) ; 
+    text-underline-offset: 8px; 
+    text-align: justify; 
+    transition: text-shadow 0.2s ease, text-decoration-color 0.2s ease; 
+    cursor: pointer;
+} 
+
+.titlefoot:hover{ 
+    text-decoration: none;
+    text-shadow: 0 0 8px currentColor;
+}  
+
+.fotcoltree{ 
+    margin: 0;
+    padding: 0;
+}
+
+.fotcoltree .itemfoot{ 
+    list-style: none; 
+    text-align: left; 
+    margin-bottom: 1rem; 
+    font-family: var(--Textos); 
+    color: var(--BackgroundPage); 
+} 
+
+.pie_de_pagina button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--Btn2YDestacado);
+    color: var(--TitulosySubtitulos);
+    box-shadow: none;
+    font-family: var(--Textos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pie_de_pagina button:hover {
+    background-color: var(--Btn1yEnlaces);
+    color: var(--BackgroundPage);
+} 
+
+.svgsiconssocial {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+}
+
+.svgsiconssocial a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--BackgroundPage);
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.svgsiconssocial a i {
+    color: inherit;
+}
