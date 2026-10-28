@@ -22,12 +22,15 @@
 
     background-color: var(--BackgroundPage);
     margin: 0 auto;
-    padding: 0;
+    padding: 0; 
+    box-sizing: border-box ;
 }
 
 .Rork { 
     margin: 0;
-    background-color: var(--BackgroundPage);
+    background-color: var(--BackgroundPage);  
+    box-sizing: border-box;
+
 }  
 
 /* nav bar */
@@ -327,7 +330,9 @@
 .pie_de_pagina{
     width: 100%; 
     background-color: var(--TitulosySubtitulos); 
-    align-content: center;
+    align-content: center; 
+    margin-top: auto;  
+    bottom: 0;
 }
 
 .footerbody{  
@@ -572,6 +577,52 @@
 
 .sectiontabeltarifas{
     padding: 0; 
-    margin: 0;
+    margin: 0;   
+    min-height: 300px;
+    background-image: url("../resources/fondotarifassection.jpeg"); 
+    background-size: cover; 
+    background-repeat: no-repeat ;
+    z-index: 0; 
+    position: relative; 
+    padding-top: 1rem;
+}   
+
+.sectiontabeltarifas h2{ 
+    text-align: center; 
+    color: var(--TitulosySubtitulos); 
+    font-size: 30px ; 
+    font-family: var(--Titulos); 
+    font-weight: 700; 
+    margin:0;
 }
+
+.grilladoTarfs{ 
+
+    display: grid; 
+    grid-template-columns: repeat(2 ,minmax(0,1fr)); 
+    gap: 5rem; 
+    padding: 1.5rem;   
+} 
+
+.grilladoTarfs h4{ 
+    text-align: center; 
+    color: var(--TitulosySubtitulos); 
+    font-family: var(--Titulos); 
+    font-size: 20px;
+} 
+
+.sectiontabeltarifas::after{ 
+
+    content: "";
+    position: absolute; 
+    inset: 0; 
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.222);
+} 
+.componentTrafs{
+    z-index: 2; 
+    margin-bottom: 2.7rem;
+}
+
+
 
