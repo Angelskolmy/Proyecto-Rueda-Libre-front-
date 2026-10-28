@@ -191,6 +191,10 @@
 
 #ranward2{ 
     min-width: 0;
+    background-image: url("../resources/ciclistas_1080x940.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 } 
 
 #imgsection1{ 
@@ -432,7 +436,9 @@
     margin-inline: auto; 
     margin-bottom: 3rem;
 
-} 
+}  
+
+
 
 .CardBody{ 
     align-items: center; 
@@ -511,4 +517,61 @@
 .BTNCARDINDEX:hover {
     background-color: var(--Btn1yEnlaces);
     color: var(--BackgroundPage);
+}  
+
+
+
+.tablastarifas {
+    --tarifas-fondo: var(--TitulosySubtitulos);
+    --tarifas-encabezado: color-mix(in srgb, var(--TitulosySubtitulos) 78%, white);
+    --tarifas-fila-alterna: color-mix(in srgb, var(--TitulosySubtitulos) 92%, white);
+    --tarifas-hover: color-mix(in srgb, var(--TitulosySubtitulos) 82%, white);
+
+    width: 100%;
+    border: 1px solid var(--Btn2YDestacado);
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--tarifas-fondo);
+    color: var(--BackgroundPage);
+    font-family: var(--Textos);
+    font-size: 0.95rem; 
 }
+
+.tablastarifas .encabezdo_tabla {
+    background-color: var(--tarifas-encabezado);
+}
+
+.tablastarifas .encabezdo_tabla .itemTable {
+    color: var(--BackgroundPage);
+    font-weight: 700;
+    text-align: left;
+}
+
+.tablastarifas .itemTable {
+    padding: 1rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--BackgroundPage) 16%, transparent);
+}
+
+.tablastarifas .Cuerpo_tabla .rowteble:nth-child(even) {
+    background-color: var(--tarifas-fila-alterna);
+}
+
+.tablastarifas .Cuerpo_tabla .rowteble:nth-child(odd) {
+    background-color: var(--tarifas-fondo);
+}
+
+.tablastarifas .Cuerpo_tabla .rowteble .itemTable:first-child {
+    color: var(--Btn2YDestacado);
+    font-weight: 700;
+}
+
+.tablastarifas .Cuerpo_tabla .rowteble:hover {
+    background-color: var(--tarifas-hover);
+} 
+
+.sectiontabeltarifas{
+    padding: 0; 
+    margin: 0;
+}
+
