@@ -759,4 +759,206 @@
 .botnocard123:hover {
     background-color: var(--Btn1yEnlaces);
     color: var(--BackgroundPage);
+} 
+
+.seccionabsolut{ 
+    padding: 0; 
+    margin: 0; 
+    background-image: url("../resources/images.jpeg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+    width: 100%; 
+    padding-top: 1rem; 
+    position: relative; 
+    z-index: 1;
+} 
+
+.seccionabsolut h2{ 
+    margin-top: 0; 
+    font-size: 30px;
+    font-family: var(--Titulos);  
+    color: var(--Btn2YDestacado);  
+    position: relative;
+    z-index: 122; 
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+
+} 
+
+
+.seccionabsolut::after{ 
+    content: ""; 
+    inset: 0; 
+    position: absolute; 
+    background-color: #0e182eb4; 
+    z-index: 0;
+} 
+
+.reservas-layout{
+    display: grid; 
+    grid-template-rows: 1fr; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 2rem;  
+    
+} 
+
+.colfomr{
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;  
+    row-gap: 1rem;
+    padding-inline: 1rem; 
+    z-index: 12; 
+} 
+
+.titlesectionfomr{
+    font-family: var(--Titulos); 
+    font-size: 18px; 
+    margin-bottom: 1rem; 
+    color: var(--BackgroundPage); 
+    text-decoration: underline;
+    text-underline-offset: 9px;  
+    text-align: center;
+
+} 
+
+.nombreinput{
+
+    font-family: var(--Titulos); 
+    font-size: 17px; 
+    margin-bottom: 0.4rem; 
+    color: var(--Btn2YDestacado); 
+    font-weight: 600;
+} 
+
+.inputstandart{ 
+    height: 25px; 
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid var(--Btn2YDestacado); 
+    background-color: var(--BackgroundPage); 
+    border-radius: 16px; 
+    margin-bottom: 2rem;
+} 
+
+.butonform11{ 
+
+    margin-top: 2.5rem; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--Btn2YDestacado);
+    color: var(--TitulosySubtitulos);
+    box-shadow: none;
+    font-family: var(--Textos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 2.5rem;
+}
+
+.butonform11:hover {
+    background-color: var(--Btn1yEnlaces);
+    color: var(--BackgroundPage);
+} 
+
+.ultimaseccion{
+    margin: 0; 
+    padding: 0;  
+}
+
+.grillador11{
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0,1fr)); 
+    padding: 1rem; 
+    gap: 2rem;
+}
+
+.grillador11 .vercel {
+    grid-column: 1 / -1;
+}
+
+.grillador11 iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.vercel{
+    text-align: center; 
+    font-family: var(--Titulos); 
+    font-size: 30px; 
+    color: var(--TitulosySubtitulos); 
+    margin-bottom: 1rem;
+} 
+
+.grillador11 .colfinal:last-child {
+    padding: 1.5rem;
+    background-color: var(--TitulosySubtitulos);
+    color: var(--BackgroundPage);
+}
+
+.grillador11 .colfinal:last-child h3 {
+    margin: 0 0 1.5rem;
+    color: var(--BackgroundPage);
+    font-family: var(--Titulos);
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.grillador11 .colfinal:last-child table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--Textos);
+}
+
+.grillador11 .colfinal:last-child thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.grillador11 .colfinal:last-child tbody tr {
+    border-top: 1px solid rgba(250, 241, 225, 0.15);
+}
+
+.grillador11 .colfinal:last-child tbody th {
+    padding: 1rem 0.5rem;
+    color: var(--Btn2YDestacado);
+    font-family: var(--Titulos);
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.grillador11 .colfinal:last-child tbody th::before {
+    content: "✦";
+    margin-right: 0.75rem;
+    color: var(--Btn2YDestacado);
+    font-size: 0.7em;
+}
+
+.grillador11 .colfinal:last-child tbody td {
+    padding: 1rem 0.5rem;
+    color: var(--BackgroundPage);
+    font-family: var(--Textos);
+    font-size: 1rem;
+    text-align: right;
+    white-space: nowrap;
 }
