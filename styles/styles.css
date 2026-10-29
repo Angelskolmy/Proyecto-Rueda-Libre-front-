@@ -524,8 +524,6 @@
     color: var(--BackgroundPage);
 }  
 
-
-
 .tablastarifas {
     --tarifas-fondo: var(--TitulosySubtitulos);
     --tarifas-encabezado: color-mix(in srgb, var(--TitulosySubtitulos) 78%, white);
@@ -584,7 +582,8 @@
     background-repeat: no-repeat ;
     z-index: 0; 
     position: relative; 
-    padding-top: 1rem;
+    padding-top: 1rem; 
+    border-bottom: 2.5px solid var(--Btn2YDestacado) ;
 }   
 
 .sectiontabeltarifas h2{ 
@@ -622,7 +621,142 @@
 .componentTrafs{
     z-index: 2; 
     margin-bottom: 2.7rem;
+} 
+
+.cardssectiontarfs{ 
+    margin: 0; 
+    padding: 1rem;  
+    background: var(--BackgroundPage); 
+    background-size: cover;  
+    justify-content: center;  
+    border-bottom: 3px solid var(--Btn2YDestacado);
+
 }
 
+.TITLECARDSTARF{ 
+    font-family: var(--Titulos); 
+    font-size: 33px; 
+    margin-left: 1rem; 
+    color: var(--TitulosySubtitulos); 
+    text-align: center; 
+    margin-bottom: 2.5rem;
+} 
 
+.containerallcards{ 
 
+    display: grid;  
+    grid-template-columns: repeat(4 ,minmax(0, 1fr)); 
+    grid-template-rows: repeat(2 ,minmax(auto, 1fr)); 
+    justify-items: center;
+    gap: 1rem;  
+    row-gap: 3rem;
+    margin-inline: auto; 
+    margin-bottom: 2rem;
+} 
+
+.bodycardtarf{ 
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    width: 300px; 
+    border: 2px solid var(--Btn2YDestacado);  
+    background-color: #0b121f;
+
+} 
+
+.imgcard44{
+
+    background-color: aqua; 
+    background-size: cover; 
+    height: 250px; 
+    border-bottom: 2px solid var(--Btn2YDestacado); 
+} 
+
+#images11{
+    background-image: url("../resources/cardstaf/Urbana Clásica.jpg");
+} 
+
+#images12{
+    background-image: url("../resources/cardstaf/Urbana Plegable.jpg");
+} 
+
+#images13{
+    background-image: url("../resources/cardstaf/Montaña Trail.jpg");
+} 
+
+#images14{
+    background-image: url("../resources/cardstaf/Gravel Aventura.jpg");
+} 
+
+#images15{
+    background-image: url("../resources/cardstaf/Eléctrica Urbana.jpg");
+} 
+
+#images16{
+    background-image: url("../resources/cardstaf/Infantil.jpg");
+} 
+
+#images17{
+    background-image: url("../resources/cardstaf/Eléctrica Urbana.jpg");
+} 
+
+#images18{
+    background-image: url("../resources/cardstaf/electrica offroad.jpg");
+} 
+
+.titelcard44{ 
+
+    margin-left: 14px; 
+    font-family:  var(--Titulos); 
+    color: var(--Btn2YDestacado); 
+    font-size: 18px; 
+    text-decoration: underline; 
+    text-underline-offset: 10px;
+} 
+
+.preciobicicard{
+
+    margin-left: 14px; 
+    font-family: var(--Textos); 
+    font-size: 16px; 
+    color: var(--TextoGeneral);
+    font-weight: 800;
+} 
+
+.textocard44{ 
+    margin-left: 14px; 
+    font-family: var(--Textos); 
+    font-size: 12px;
+    color: var(--BackgroundPage);
+    font-weight: 600; 
+    margin-right: 14px; 
+    text-align: justify; 
+    margin-bottom: 2rem;
+}
+
+.botnocard123 {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--Btn2YDestacado);
+    color: var(--TitulosySubtitulos);
+    box-shadow: none;
+    font-family: var(--Textos);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease; 
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.botnocard123:hover {
+    background-color: var(--Btn1yEnlaces);
+    color: var(--BackgroundPage);
+}
